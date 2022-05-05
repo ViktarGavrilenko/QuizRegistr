@@ -1,0 +1,4 @@
+{
+  "wallGet": "https://api.vk.com/method/wall.get?owner_id=-%s&count=2&filter=owner&extended=0&v=5.131&access_token=%s",
+  "wallCreateComment": "https://api.vk.com/method/wall.createComment?owner_id=-%s&post_id=%s&from_group=0&message=%s&v=5.131&access_token=%s"
+}
