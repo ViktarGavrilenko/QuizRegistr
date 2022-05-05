@@ -34,5 +34,4 @@ public class VkApiUtils {
         String apiRequest = String.format(WALL_CREATE_COMMENT, ownerId, post_id, message, token);
         sendGet(apiRequest);
     }
-
 }

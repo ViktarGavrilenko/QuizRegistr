@@ -16,9 +16,9 @@ public class QuizRegistrationTest {
     @Test(description = "Testing for registration")
     public void RegistrationTest() {
         VkApiUtils vkApiUtils = new VkApiUtils();
-
         int idPost = 0;
-        while (POST_ID > idPost) {
+
+        while (POST_ID >= idPost) {
             WallGet wallGets = vkApiUtils.getIdLastPost(OWNER_ID, TOKEN);
             for (int i = 0; i < wallGets.response.items.size(); i++) {
                 if (idPost < wallGets.response.items.get(i).id) {
@@ -29,7 +29,7 @@ public class QuizRegistrationTest {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                Logger.getInstance().error("Exception: " + e);
             }
         }
         vkApiUtils.createCommentOnWall(OWNER_ID, Integer.toString(idPost), MESSAGE, TOKEN);

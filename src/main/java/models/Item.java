@@ -23,4 +23,9 @@ public class Item {
     public String edited;
     public String hash;
     public String carousel_offset;
+    public String can_delete;
+    public String can_edit;
+    public String created_by;
+    public String can_pin;
+    public String zoom_text;
 }
