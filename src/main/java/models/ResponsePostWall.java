@@ -1,10 +1,10 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 
+@JsonIgnoreProperties({"count", "profiles", "groups"})
 public class ResponsePostWall {
-    public int count;
     public ArrayList<Item> items;
-    public ArrayList profiles;
-    public ArrayList<Groups> groups;
 }
